@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+
+
+int lastDigit(int n) {
+    return (n % 10);
+}
+int firstDigit(int n) {
+    while (n >= 10)
+        n /= 10;
+    return n;
+}
+int main() {
+    int T;
+    cin >> T; // Number of test cases
+
+    while (T--) {
+        int N;
+        cin >> N; // Input number for each test case
+
+        int first = firstDigit(N);
+        int last = lastDigit(N);
+
+        cout <<(first + last) << endl;
+    }
+
+    return 0;
+}
+
